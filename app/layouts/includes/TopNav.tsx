@@ -61,15 +61,27 @@ export default function TopNav() {
                             <span className="px-2 font-medium text-[15px]">Upload</span>
                         </button>
 
-                        <div className="flex items-center">
-                            <button 
-                                className="flex items-center bg-[#F12B56] text-white border rounded-md px-3 py-[6px]"
-                            >
-                                <span className="whitespace-nowrap mx-4 font-medium text-[15px]">Log in</span>
-                            </button>
+                        {true ? (
+                            <div className="flex items-center">
+                                <button 
+                                    className="flex items-center bg-[#F12B56] text-white border rounded-md px-3 py-[6px]"
+                                >
+                                    <span className="whitespace-nowrap mx-4 font-medium text-[15px]">Log in</span>
+                                </button>
 
-                            <BsThreeDotsVertical color = "#161724" size="25"/>
-                        </div>
+                                <BsThreeDotsVertical color = "#161724" size="25"/>
+                            </div>
+                        ) : (
+                            <div className="flex items-center">
+                                <div className="relative">
+                                    <button
+                                        className="mt-1 border border-grey-200 rounded-full"
+                                    >
+                                        <img className="rounded-full w-[35px] h-[35px]" src="https://placeholder.co/35"/>
+                                    </button>
+                                </div>
+                            </div>
+                        )}
                     </div>                  
                 </div>
             </div> 
